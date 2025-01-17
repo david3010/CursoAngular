@@ -1,11 +1,11 @@
 export class Person {
-    public name: string;
-    public address: Address;
+    // public name: string;
+    // public address: Address;
 
-    constructor(name: string, address: Address) {
-        this.name = name;
-        this.address = address;
-    }
+    constructor(public name: string, private address: Address) {}
+    //     this.name = name;
+    //     this.address = address;
+    // }
 }
 
 class Address {
