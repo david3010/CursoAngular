@@ -6,6 +6,6 @@ dns.setDefaultResultOrder('verbatim')
 export default defineConfig({
     server: {
         open: '/index.html',
-        port: 3000,
+        port: 3000
     }
 })

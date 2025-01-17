@@ -37,3 +37,7 @@ const tax = 0.16;
 let [total, taxTotal] = taxCalculation({ tax, products: shoppingCart });
 
 console.log(`Total: ${total}, Tax: ${taxTotal}`);
+
+export type { Product };
+
+export { taxCalculation };
