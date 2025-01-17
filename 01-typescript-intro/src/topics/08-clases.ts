@@ -19,3 +19,13 @@ class Address {
         this.state = state;
     }
 }
+
+export class Hero extends Person {
+    constructor(public alterEgo: string, public age:number, public realName:string) {
+        super(realName, new Address('123 main st', 'NY', 'NY'));
+    }
+}
+
+const ironMan = new Hero('Ironman', 45, 'Tony');
+
+console.log(ironMan);
