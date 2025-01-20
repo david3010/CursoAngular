@@ -20,12 +20,28 @@ class Address {
     }
 }
 
-export class Hero extends Person {
+/* export class Hero {
+    public person: Person;
     constructor(public alterEgo: string, public age:number, public realName:string) {
-        super(realName, new Address('123 main st', 'NY', 'NY'));
+       this.person = new Person(realName, new Address('123 main st', 'NY', 'NY'));
+    }
+} */
+
+export class Hero {
+    constructor(
+        public alterEgo: string,
+        public age:number, 
+        public realName:string,
+        public person: Person) {
+       this.alterEgo = alterEgo;
+       this.age = age;    
+       this.realName = realName;
+       this.person = person;
     }
 }
 
-const ironMan = new Hero('Ironman', 45, 'Tony');
+const person = new Person('Peter Parker', new Address('123 main st', 'NY', 'NY'));
+const ironMan = new Hero('Ironman',45, 'Tony Stark', person);
 
 console.log(ironMan);
+console.log(person);
