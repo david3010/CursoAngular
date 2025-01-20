@@ -1,5 +1,3 @@
-import { Person } from "./08-clases";
-
 export function whatsMyType(argument: any): string {
     return typeof argument;
 }
