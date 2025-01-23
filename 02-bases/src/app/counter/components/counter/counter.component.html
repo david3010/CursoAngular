@@ -1,0 +1,9 @@
+<h3>Counter: {{ counter }}</h3>
+
+<button class="btn btn-outline-primary" (click)="handleAddClick()">+</button>
+<button class="btn btn-outline-primary" (click)="handleResetClick()">reset</button>
+<button class="btn btn-outline-primary" (click)="handleSubstractClick()">-</button>
+
+<div *ngIf="counter > 10">
+  <p>Mayor a 10</p>
+</div>
