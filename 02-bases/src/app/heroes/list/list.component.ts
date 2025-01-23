@@ -9,5 +9,9 @@ import { Component } from '@angular/core';
 })
 export class ListComponent {
   public heroes: string[] = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+  public heroRemoved?: string;
 
+  removeLastHero(): void {
+    this.heroRemoved = this.heroes.pop() || '';
+  }
 }
