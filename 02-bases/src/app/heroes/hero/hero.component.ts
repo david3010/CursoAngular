@@ -11,6 +11,7 @@ export class HeroComponent {
 
   public name: string = 'ironman';
   public age: number = 45;
+  public nameChanged: boolean = false;
 
   get capitalizedName(): string {
     return this.name.toUpperCase();
@@ -21,11 +22,19 @@ export class HeroComponent {
   }
 
   changeHero(): void {
+    this.nameChanged = true;
     this.name = 'spiderman';
   }
 
   changeAge(): void {
+    this.nameChanged = true;
     this.age = 50;
+  }
+
+  reset(): void {
+    this.nameChanged = false;
+    this.name = 'ironman';
+    this.age = 45;
   }
 
 }
