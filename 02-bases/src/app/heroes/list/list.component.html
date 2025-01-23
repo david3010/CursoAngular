@@ -1,2 +1,7 @@
-<br>
-<p>list works!</p>
+<h3>Listado de Heroes</h3>
+
+<ul class="mt-2 list-group">
+  <li *ngFor="let hero of heroes" class="list-group-item">
+      {{ hero }}
+  </li>
+</ul>
