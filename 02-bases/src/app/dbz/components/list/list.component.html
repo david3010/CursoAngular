@@ -7,7 +7,11 @@
   let last = last;
   let odd = odd;
   let even = even;
-  ">
+  " [ngClass]="{
+    'list-group-item-primary': first,
+    'list-group-item-success': last,
+    'list-group-item-danger': odd
+  }">
     {{idx + 1}} {{character.name}} - {{character.power}}
     {{first ? 'Es el primero' : ''}}
     {{last ? 'Es el último' : ''}}
