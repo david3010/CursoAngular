@@ -20,4 +20,12 @@ export class MainPageComponent {
     power: 5000
   }];
 
+  public  onNewCharacter(character: Character): void {
+    this.characters.push(character);
+  }
+
+  public onDeleteCharacter(idx: number): void {
+    this.characters.splice(idx, 1);
+  }
+
 }
