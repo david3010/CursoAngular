@@ -13,9 +13,10 @@ export class ListComponent {
    public characters: Character[] = [];
 
    @Output()
-   public onDeleteCharacter: EventEmitter<number> = new EventEmitter();
+   public onDelete: EventEmitter<string> = new EventEmitter<string>();
 
-   public onDelete(idx: number): void {
-     this.onDeleteCharacter.emit(idx);
+   public onDeleteCharacter(id?: string): void {
+     if (!id) return;
+     this.onDelete.emit(id);
    }
 }
